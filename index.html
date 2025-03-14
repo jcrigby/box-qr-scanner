@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box QR Scanner</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Box QR Scanner</h1>
+        
+        <div id="scanner-container">
+            <div id="qr-reader"></div>
+            <div id="camera-permission-error" class="hidden">
+                <p>Camera access is required for QR scanning.</p>
+                <button id="request-permission">Grant Camera Access</button>
+            </div>
+        </div>
+        
+        <div id="result-container" class="hidden">
+            <div class="box-info">
+                <h2 id="box-title">Box Title</h2>
+                <p id="box-description">Description will appear here.</p>
+                <div id="image-container">
+                    <img id="box-image" src="" alt="Box contents">
+                </div>
+                <button id="scan-another">Scan Another Box</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Scanner Library -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="./js/app.js"></script>
+    
+    <!-- For Offline Support (Optional - uncomment to enable) -->
+    <!-- <script src="./js/registerSW.js"></script> -->
+</body>
+</html>
